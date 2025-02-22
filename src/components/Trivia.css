@@ -1,0 +1,36 @@
+.trivia-sec .question, .trivia-sec .ans{
+    background: linear-gradient(#100241, black);
+}
+.trivia-sec .ans:hover,
+.trivia-sec .ans.active {
+    background: mediumblue;
+}
+.trivia-sec .ans.correct {
+    animation: correct 3s ease forwards;
+}
+.trivia-sec .ans.wrong {
+    animation: wrong 3s ease forwards;
+}
+
+@keyframes correct {
+    0%, 22%, 42%, 62% {
+        background: mediumblue;
+    }
+    20%, 40%, 60%, 80% {
+        background: linear-gradient(#100241, black);
+    }
+    82%, 100% {
+        background: green;
+    }
+}
+@keyframes wrong {
+    0%, 22%, 42%, 62% {
+        background: mediumblue;
+    }
+    20%, 40%, 60%, 80% {
+        background: linear-gradient(#100241, black);
+    }
+    82%, 100% {
+        background: crimson;
+    }
+}
